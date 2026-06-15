@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHARLES 夏尔 | Swimwear Demo</title>
+    <meta
+      name="description"
+      content="CHARLES 夏尔泳装网站 DEMO，展示夏日比基尼、牛仔短裤与海滩度假造型。"
+    />
+    <link rel="icon" type="image/png" href="./assets/logo/store-logo.png" />
+    <link rel="stylesheet" href="./styles.css?v=20260615-3" />
+  </head>
+  <body>
+    <div class="announcement">夏日新品 DEMO · 比基尼 169-199 RMB · 牛仔短裤 188 RMB</div>
+
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="CHARLES 夏尔首页">
+        <img src="./assets/logo/store-logo.png" alt="CHARLES 夏尔" />
+        <span>CHARLES 夏尔</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#new">New In</a>
+        <a href="#bikinis">Bikinis</a>
+        <a href="#denim">Denim Shorts</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="bag-button" type="button" data-toast="Beach bag is in demo mode">
+        Beach Bag
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="CHARLES 夏尔夏日泳装">
+        <div class="hero-carousel" aria-label="首页视频轮播">
+          <video class="hero-video active" autoplay muted playsinline poster="./assets/products/ch001-front.png">
+            <source src="./assets/video/hero-01.mp4" type="video/mp4" />
+          </video>
+          <video class="hero-video" muted playsinline poster="./assets/products/ch004-front.png">
+            <source src="./assets/video/hero-02.mp4" type="video/mp4" />
+          </video>
+          <video class="hero-video" muted playsinline poster="./assets/products/ch012-front.png">
+            <source src="./assets/video/hero-03.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Summer Drop 2026</p>
+          <h1>
+            <span>Sunlit swimwear</span>
+            <span>for every</span>
+            <span>golden-hour</span>
+            <span>plan.</span>
+          </h1>
+          <p>
+            <span>从唇印、豹纹到波点与蓝色恋人，</span>
+            <span>CHARLES 夏尔把泳装做成一场热烈的海边出逃。</span>
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#new">Shop the Demo</a>
+            <a class="secondary-link" href="#lookbook">View Lookbook</a>
+          </div>
+        </div>
+        <button class="hero-side-arrow hero-side-prev" type="button" data-hero-prev aria-label="上一个视频">
+          &#8249;
+        </button>
+        <button class="hero-side-arrow hero-side-next" type="button" data-hero-next aria-label="下一个视频">
+          &#8250;
+        </button>
+        <div class="hero-controls" aria-label="视频轮播控制">
+          <div class="hero-dots" aria-label="选择首页视频">
+            <button class="hero-dot active" type="button" data-hero-slide="0" aria-label="播放第 1 段视频"></button>
+            <button class="hero-dot" type="button" data-hero-slide="1" aria-label="播放第 2 段视频"></button>
+            <button class="hero-dot" type="button" data-hero-slide="2" aria-label="播放第 3 段视频"></button>
+          </div>
+          <button class="bgm-toggle" type="button" aria-pressed="false" aria-label="打开视频背景音乐">
+            BGM Off
+          </button>
+        </div>
+      </section>
+
+      <section class="section intro-band" aria-label="品牌亮点">
+        <div>
+          <span class="metric">12</span>
+          <p>款比基尼，覆盖甜美、野性、复古与波西米亚风格。</p>
+        </div>
+        <div>
+          <span class="metric">3</span>
+          <p>款牛仔短裤，适合做海滩外搭和度假套装。</p>
+        </div>
+        <div>
+          <span class="metric">¥169+</span>
+          <p>轻价格展示，适合 DEMO 阶段表达完整商品线。</p>
+        </div>
+      </section>
+
+      <section id="new" class="section product-section">
+        <div class="section-heading">
+          <p class="eyebrow">New In</p>
+          <h2>Hot pieces, ready for the beach club.</h2>
+        </div>
+
+        <div class="filters" aria-label="商品分类筛选">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="bikini" id="bikinis">Bikinis</button>
+          <button class="filter-button" type="button" data-filter="shorts" id="denim">Denim Shorts</button>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section collection-strip" aria-label="系列入口">
+        <a class="collection-panel panel-lips" href="#new">
+          <span>Print Crush</span>
+          <strong>唇印、波点、蝶翼，让图案先说话。</strong>
+        </a>
+        <a class="collection-panel panel-wild" href="#new">
+          <span>Wild Heat</span>
+          <strong>豹纹、斑马与牧场风，把夏天穿得更野。</strong>
+        </a>
+        <a class="collection-panel panel-denim" href="#new">
+          <span>Beach Denim</span>
+          <strong>牛仔短裤外搭，海边到街头都成立。</strong>
+        </a>
+      </section>
+
+      <section id="lookbook" class="section lookbook">
+        <div class="section-heading">
+          <p class="eyebrow">Lookbook</p>
+          <h2>Built around sun, skin, print, and motion.</h2>
+        </div>
+        <div class="lookbook-grid">
+          <img src="./assets/products/ch001-front.png" alt="粉色唇印比基尼造型" />
+          <img src="./assets/products/ch004-front.png" alt="金钱豹73比基尼造型" />
+          <img src="./assets/products/xl001-front.png" alt="牛仔短裤海滩造型" />
+          <img src="./assets/products/ch010-front.png" alt="波西米亚畅享比基尼造型" />
+          <img src="./assets/products/ch012-front.png" alt="蓝色之恋比基尼造型" />
+          <img src="./assets/products/ch008-front.png" alt="复古波点比基尼正面造型" />
+          <img src="./assets/products/ch011-front.png" alt="牧场诱惑比基尼造型" />
+        </div>
+      </section>
+
+      <section class="section story">
+        <div class="story-copy">
+          <p class="eyebrow">About CHARLES</p>
+          <h2>为会发光的夏天做泳装。</h2>
+          <p>
+            CHARLES 夏尔的 DEMO 风格围绕大胆印花、利落剪裁和度假镜头展开。它不是厚重的商城后台，
+            而是一张让人快速理解品牌气质的视觉名片。
+          </p>
+        </div>
+        <div class="story-image">
+          <img src="./assets/products/ch006-front.png" alt="蝶翼之变比基尼" />
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div>
+        <img src="./assets/logo/store-logo.png" alt="" />
+        <strong>CHARLES 夏尔</strong>
+      </div>
+      <p>Beach club energy, made for a visual DEMO.</p>
+      <nav aria-label="页脚链接">
+        <a href="mailto:hello@charles-demo.local">Email</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#new">Products</a>
+      </nav>
+    </footer>
+
+    <dialog class="product-modal" id="productModal" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="关闭商品详情">×</button>
+      <div class="modal-layout">
+        <div class="modal-gallery" id="modalGallery"></div>
+        <div class="modal-copy">
+          <p class="eyebrow" id="modalCategory"></p>
+          <h2 id="modalTitle"></h2>
+          <p class="modal-price" id="modalPrice"></p>
+          <p id="modalDescription"></p>
+          <div class="size-row" id="modalSizes"></div>
+          <button class="primary-link modal-add" type="button" data-toast="Demo only: no checkout connected">
+            Add to Beach Bag
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
