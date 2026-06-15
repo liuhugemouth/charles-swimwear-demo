@@ -211,11 +211,11 @@ function bikiniMedia(product) {
   const productCode = product.id.toLowerCase();
   const media = [
     [product.back, `${product.name} 背面`],
-    [`${productCode}-fabric.png`, `${product.name} 面料`],
+    [`${productCode}-fabric.webp`, `${product.name} 面料`],
   ];
 
   if (!productsWithoutDetailImage.has(product.id)) {
-    media.push([`${productCode}-detail.png`, `${product.name} 细节图`]);
+    media.push([`${productCode}-detail.webp`, `${product.name} 细节图`]);
   }
 
   return media.filter(([file]) => Boolean(file)).map(([file, alt]) => modalImage(file, alt));
