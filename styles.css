@@ -540,15 +540,15 @@ h2 {
 }
 
 .panel-lips::before {
-  background-image: url("./assets/products/ch001-front.png");
+  background-image: url("./assets/products/ch001-front.webp");
 }
 
 .panel-wild::before {
-  background-image: url("./assets/products/ch004-front.png");
+  background-image: url("./assets/products/ch004-front.webp");
 }
 
 .panel-denim::before {
-  background-image: url("./assets/products/xl001-front.png");
+  background-image: url("./assets/products/xl001-front.webp");
 }
 
 .lookbook {
