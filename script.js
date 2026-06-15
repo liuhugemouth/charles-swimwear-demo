@@ -290,6 +290,10 @@ function showToast(message) {
 }
 
 function playHeroVideo(video) {
+  video.preload = "auto";
+  video.loop = true;
+  video.playsInline = true;
+  if (video.readyState < 2) video.load();
   video.muted = !bgmEnabled;
   video.volume = bgmEnabled ? 0.72 : 0;
   const playAttempt = video.play();
@@ -318,7 +322,11 @@ function setHeroSlide(index, restart = true) {
     const active = videoIndex === currentHero;
     video.classList.toggle("active", active);
     if (active) {
-      if (restart) video.currentTime = 0;
+      if (restart) {
+        try {
+          video.currentTime = 0;
+        } catch {}
+      }
       playHeroVideo(video);
     } else {
       video.pause();
@@ -416,6 +424,10 @@ bgmToggle?.addEventListener("click", () => {
   updateBgmButton();
   setHeroSlide(currentHero, false);
   showToast(bgmEnabled ? "BGM on" : "BGM off");
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) setHeroSlide(currentHero, false);
 });
 
 renderProducts();
